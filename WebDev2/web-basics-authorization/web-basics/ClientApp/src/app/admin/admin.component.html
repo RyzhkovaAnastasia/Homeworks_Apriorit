@@ -1,0 +1,87 @@
+<h3>Add new user</h3>
+<form [formGroup]="addForm" method="post" (ngSubmit)="postNewAccount()">
+  <br />
+  <input type="email" name="Email" placeholder="Email" formControlName="Email" required>
+  <div *ngIf="addForm.controls['Email'].invalid && addForm.controls['Email'].touched">
+    Email is required. It must fit the email pattern.
+  </div>
+  <br />
+  <br />
+  <input type="text" name="Password" placeholder="Password" formControlName="Password" required>
+  <div *ngIf="addForm.controls['Password'].invalid && addForm.controls['Password'].touched">
+    Password is required. Name must be at least 6 characters long.
+  </div>
+  <br />
+  <br />
+  <select formControlName="Role" [(ngModel)]="selectedValue" required>
+    <option [ngValue]="0" [selected]="true">User</option>
+    <option [ngValue]="1">Admin</option>
+  </select>
+  <br />
+  <br />
+  <button class="btn btn-primary"
+          type="submit"
+          [disabled]="addForm.controls['Email'].invalid||addForm.controls['Password'].invalid">
+    Add
+  </button>
+</form>
+
+<br />
+<br />
+
+<h3>List of users</h3>
+<p *ngIf="accounts.length <= 0"><em>Loading...</em></p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="accounts.length > 0">
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Role</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let account of accounts; let i = index">
+      <td>
+        <p>{{ account.id }}</p>
+      </td>
+      <td>
+        <p>{{ account.email }}</p>
+      </td>
+      <td>
+        <p>{{ account.password }}</p>
+      </td>
+      <td>
+        <p *ngIf="!editMode[i]">{{ getRoleName(account.role)}}</p>
+        <select class="form-control" name="role" *ngIf="editMode[i]" [(ngModel)]="account.role">
+          <option [ngValue]="0" [selected]="0 == account.role">User</option>
+          <option [ngValue]="1" [selected]="1 == account.role">Admin</option>
+        </select>
+      </td>
+      <td>
+        <input class="btn-primary"
+               type="submit"
+               name="Edit"
+               value="Edit"
+               *ngIf="!editMode[i]"
+               (click)="onEdit(i, true)" />
+        <input class="btn-primary"
+               type="submit"
+               name="Save"
+               value="Save"
+               *ngIf="editMode[i]"
+               (click)="putEditedUser(i, account)" />
+      </td>
+      <td>
+        <input class="btn-primary"
+               type="button"
+               name="Delete"
+               value="Delete"
+               (click)="deleteUser(account.id)" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
