@@ -50,7 +50,7 @@ namespace Books.Controllers
     }
 
     [HttpDelete]
-    public void DeleteBook(int id)
+    public void DeleteBook([FromQuery]int id)
     {
       bookDomain.Delete(id);
     }
@@ -58,7 +58,7 @@ namespace Books.Controllers
     [HttpPost]
     public void PostBook(BookViewModel book)
     {
-      bookDomain.Put(book);
+      bookDomain.Post(book);
     }
 
     [HttpPut]

@@ -74,7 +74,8 @@ namespace Books.Data.Repository
       var book = context.Books.Where(book => book.Id == id).FirstOrDefault();
       if (book != null)
       {
-        context.Books.Add(book);
+        context.Books.Remove(book);
+        context.SaveChanges();
       }
     }
   }

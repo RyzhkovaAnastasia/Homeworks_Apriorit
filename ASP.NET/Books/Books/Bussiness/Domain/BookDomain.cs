@@ -53,7 +53,7 @@ namespace Books.Bussiness.Domain
     public void Put(BookViewModel book)
     {
       this.mapper = new MapperConfiguration(cfg => {
-        cfg.CreateMap<BookViewModel, Data.Models.Book>().ForMember(vm => vm.Genres, opt => opt.MapFrom(x => x.Genres.Select(y => y.Books)));
+        cfg.CreateMap<BookViewModel, Data.Models.Book>();
         cfg.CreateMap<GenreViewModel, Data.Models.Genre>();
       }).CreateMapper();
       var newBook = mapper.Map< BookViewModel, Data.Models.Book>(book);

@@ -10,23 +10,25 @@ namespace Books.Data
     public static void Initialize(BooksDBContext context)
     {
       context.Database.Delete();
-      context.Database.Exists();
-      if (!context.Books.Any() && !context.Genres.Any())
+      if (!context.Database.Exists())
       {
-        Models.Book book1 = new Models.Book { Title = "Фантастические истории игрушек", Author = "Кольс А.М.", Year = 1994 };
-        Models.Book book2 = new Models.Book { Title = "Широкая улыбка моряка", Author = "Параходов О.В.", Year = 1990 };
-        Models.Book book3 = new Models.Book { Title = "Приключения Шерлока Холмса", Author = "Конан-Дойль мл.", Year = 2001 };
-        context.Books.AddRange(new List<Models.Book> { book1, book2, book3 });
-        context.SaveChanges();
+        if (!context.Books.Any() && !context.Genres.Any())
+        {
+          Models.Book book1 = new Models.Book { Title = "Фантастические истории игрушек", Author = "Кольс А.М.", Year = 1994 };
+          Models.Book book2 = new Models.Book { Title = "Широкая улыбка моряка", Author = "Параходов О.В.", Year = 1990 };
+          Models.Book book3 = new Models.Book { Title = "Приключения Шерлока Холмса", Author = "Конан-Дойль мл.", Year = 2001 };
+          context.Books.AddRange(new List<Models.Book> { book1, book2, book3 });
+          context.SaveChanges();
 
-        Models.Genre genre1 = new Models.Genre { Name = "Приключения" };
-        genre1.Books.Add(book2);
-        genre1.Books.Add(book3);
-        Models.Genre genre2 = new Models.Genre { Name = "Фантастика" };
-        genre2.Books.Add(book1);
-        context.Genres.Add(genre1);
-        context.Genres.Add(genre2);
-        context.SaveChanges();
+          Models.Genre genre1 = new Models.Genre { Name = "Приключения" };
+          genre1.Books.Add(book2);
+          genre1.Books.Add(book3);
+          Models.Genre genre2 = new Models.Genre { Name = "Фантастика" };
+          genre2.Books.Add(book1);
+          context.Genres.Add(genre1);
+          context.Genres.Add(genre2);
+          context.SaveChanges();
+        }
       }
     }
   }

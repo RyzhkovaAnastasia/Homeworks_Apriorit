@@ -18,10 +18,5 @@ namespace Books.Data
       this._configuration = configuration;
       DbInitializer.Initialize(this);
     }
-
-    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //{
-    //  optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
-    //}
   }
 }
