@@ -53,14 +53,14 @@ namespace Books.Data.Repository
     {
       var oldBook = context.Books.Where(oldBook => oldBook.Id == book.Id).FirstOrDefault();
       if (oldBook != null)
-        {
-          oldBook.Title = book.Title;
-          oldBook.Year = book.Year;
-          oldBook.Author = book.Author;
-          oldBook.Genres = book.Genres;
-          oldBook.PublishingHouse = book.PublishingHouse;
-          context.SaveChanges();
-        }
+      {
+        oldBook.Title = book.Title;
+        oldBook.Year = book.Year;
+        oldBook.Author = book.Author;
+        oldBook.Genres = book.Genres;
+        oldBook.PublishingHouse = book.PublishingHouse;
+        context.SaveChanges();
+      }
     }
 
     public void Post(Models.Book book)

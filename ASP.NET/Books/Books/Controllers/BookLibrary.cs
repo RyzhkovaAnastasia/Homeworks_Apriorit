@@ -26,45 +26,52 @@ namespace Books.Controllers
 
     [HttpGet]
     [Route("genres")]
-    public IEnumerable<GenreViewModel> GetGenres()
+    public IActionResult GetGenres()
     {
-      return genreDomain.Get();
+      var genres = genreDomain.Get();
+      return Ok(genres);
     }
 
     [HttpGet]
-    public IEnumerable<BookViewModel> GetBooks()
+    public IActionResult GetBooks()
     {
-      return bookDomain.Get();
+      var books = bookDomain.Get();
+      return Ok(books);
     }
 
     [HttpGet("book")]
-    public BookViewModel GetBook(int id)
+    public IActionResult GetBook(int id)
     {
-      return bookDomain.Get(id);
+      var book = bookDomain.Get(id);
+      return Ok(book);
     }
 
     [HttpGet("booksbygenre")]
-    public IEnumerable<BookViewModel> GetBooksByGenres(int id)
+    public IActionResult GetBooksByGenres(int id)
     {
-      return bookDomain.GetByGenre(id);
+      var books = bookDomain.GetByGenre(id);
+      return Ok(books);
     }
 
     [HttpDelete]
-    public void DeleteBook([FromQuery]int id)
+    public IActionResult DeleteBook([FromQuery] int id)
     {
       bookDomain.Delete(id);
+      return Ok();
     }
 
     [HttpPost]
-    public void PostBook(BookViewModel book)
+    public IActionResult PostBook(BookViewModel book)
     {
       bookDomain.Post(book);
+      return Ok();
     }
 
     [HttpPut]
-    public void PutBook(BookViewModel book)
+    public IActionResult PutBook(BookViewModel book)
     {
       bookDomain.Put(book);
+      return Ok();
     }
   }
 }

@@ -22,7 +22,8 @@ namespace Books.Bussiness.Domain
 
     public IEnumerable<BookViewModel> Get()
     {
-      mapper = new MapperConfiguration(cfg => {
+      mapper = new MapperConfiguration(cfg =>
+      {
         cfg.CreateMap<Data.Models.Book, BookViewModel>();
         cfg.CreateMap<Data.Models.Genre, GenreViewModel>();
       }).CreateMapper();
@@ -32,7 +33,8 @@ namespace Books.Bussiness.Domain
 
     public BookViewModel Get(int id)
     {
-      mapper = new MapperConfiguration(cfg => {
+      mapper = new MapperConfiguration(cfg =>
+      {
         cfg.CreateMap<Data.Models.Book, BookViewModel>();
         cfg.CreateMap<Data.Models.Genre, GenreViewModel>();
       }).CreateMapper();
@@ -42,7 +44,8 @@ namespace Books.Bussiness.Domain
 
     public IEnumerable<BookViewModel> GetByGenre(int idGenre)
     {
-      mapper = new MapperConfiguration(cfg => {
+      mapper = new MapperConfiguration(cfg =>
+      {
         cfg.CreateMap<Data.Models.Book, BookViewModel>();
         cfg.CreateMap<Data.Models.Genre, GenreViewModel>();
       }).CreateMapper();
@@ -52,22 +55,23 @@ namespace Books.Bussiness.Domain
 
     public void Put(BookViewModel book)
     {
-      this.mapper = new MapperConfiguration(cfg => {
+      this.mapper = new MapperConfiguration(cfg =>
+      {
         cfg.CreateMap<BookViewModel, Data.Models.Book>();
         cfg.CreateMap<GenreViewModel, Data.Models.Genre>();
       }).CreateMapper();
-      var newBook = mapper.Map< BookViewModel, Data.Models.Book>(book);
+      var newBook = mapper.Map<BookViewModel, Data.Models.Book>(book);
       repository.Put(newBook);
     }
 
     public void Post(BookViewModel book)
     {
-      this.mapper = new MapperConfiguration(cfg => {
+      this.mapper = new MapperConfiguration(cfg =>
+      {
         cfg.CreateMap<BookViewModel, Data.Models.Book>();
         cfg.CreateMap<GenreViewModel, Data.Models.Genre>();
       }).CreateMapper();
       var newBook = mapper.Map<BookViewModel, Data.Models.Book>(book);
-
       repository.Post(newBook);
     }
     public void Delete(int id)

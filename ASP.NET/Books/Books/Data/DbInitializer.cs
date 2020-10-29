@@ -9,7 +9,6 @@ namespace Books.Data
   {
     public static void Initialize(BooksDBContext context)
     {
-      context.Database.Delete();
       if (!context.Database.Exists())
       {
         if (!context.Books.Any() && !context.Genres.Any())

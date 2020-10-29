@@ -18,7 +18,8 @@ namespace Book.Business.Domains
     public GenreDomain(IConfiguration configuration)
     {
       this.repository = new GenreRepository(configuration);
-      this.mapper = new MapperConfiguration(cfg => {
+      this.mapper = new MapperConfiguration(cfg =>
+      {
         cfg.CreateMap<Genre, GenreViewModel>();
         cfg.CreateMap<Books.Data.Models.Book, BookViewModel>();
       }).CreateMapper();
