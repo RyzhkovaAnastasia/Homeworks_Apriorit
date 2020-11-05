@@ -2,13 +2,13 @@
   <h1>Dashboard</h1>
   <form [formGroup]="messageFrom" (submit)="add()">
     <h3>Add message: </h3>
-    <input [formControl]="message" type="text" placeholder="Message">
+    <input formControlName="message" type="text" placeholder="Message text">
     <input type="submit">
   </form>
-    <span *ngIf="error.length !== 0">{{error}}</span>
+  <span *ngIf="error.length !== 0">{{error}}</span>
   <br>
   <br>
-  <div *ngIf = "messages.length !== 0">
+  <div *ngIf="messages.length !== 0">
     <h3>Messages list </h3>
     <table>
       <thead>
@@ -27,7 +27,9 @@
           </td>
           <td>
             <div>
-              <button (click)="msg.id === editId ? update(msg.id, $event) : setEditable(msg.id, $event)">Update</button>
+              <button (click)="msg.id === editId ? 
+              update(msg.id, $event) : 
+              onUpdate(msg.id, $event)">Update</button>
               <button (click)="delete(msg.id)">Delete</button>
             </div>
           </td>

@@ -10,23 +10,24 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private dashService: DashboardService) { }
-
-  public editId: number;
-  public editedValue: string;
-
   public messageFrom = new FormGroup({
-    message: new FormControl("", Validators.required)
+    message: new FormControl("")
   });
 
   message = this.messageFrom.get('message');
 
   public messages: Message[];
   public error = "";
+  public editId: number;
+  public editedValue: string;
+
+  constructor(private dashService: DashboardService) { }
+
 
   ngOnInit(): void {
     this.messages = [];
-    this.dashService.get().subscribe(data => {
+    this.dashService.get()
+    .subscribe(data => {
       this.error = "";
       this.messages = data;
     }, err => {
@@ -34,9 +35,10 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  setEditable(id: number, event: any) {
+  onUpdate(id: number, event: any) {
     this.editId = id;
-    this.editedValue = this.messages.find(message => message.id === id).msg;
+    this.editedValue = this.messages
+    .find(message => message.id === id).msg;
     event.target.innerText = "Save";
   }
 
@@ -45,7 +47,8 @@ export class DashboardComponent implements OnInit {
       id: id,
       msg: this.editedValue
     }
-    this.dashService.put(msg).subscribe(data => {
+    this.dashService.put(msg)
+    .subscribe(data => {
       this.messages.find(message => message.id === id).msg = data.msg;
       this.error = "";
       err => {
@@ -53,11 +56,12 @@ export class DashboardComponent implements OnInit {
       }
     });
     this.editId = null;
-    event.target.textContent = "Edit";
+    event.target.textContent = "Update";
   }
 
   delete(id: number) {
-    this.dashService.delete(id).subscribe(() => {
+    this.dashService.delete(id)
+    .subscribe(() => {
       this.error = "";
       err => {
         this.error = "Error delete http";
@@ -68,17 +72,8 @@ export class DashboardComponent implements OnInit {
   }
 
   add() {
-    if(!this.messageFrom.valid) {
-      this.messageFrom.markAllAsTouched();
-      return;
-    }
-      
-    var msg: Message = {
-      id: 0,
-      msg: this.message.value
-    }
-    
-    this.dashService.post(msg).subscribe(data => {
+    this.dashService.post(this.messageFrom.value)
+    .subscribe(data => {
       this.messages.push(data);
       this.error = "";
     }, err => {

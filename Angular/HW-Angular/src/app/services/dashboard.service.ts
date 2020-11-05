@@ -18,12 +18,12 @@ export class DashboardService {
     return this.httpClient.get<Message[]>(this.url);
   }
 
-  post(msg): Observable<Message> {
-    return this.httpClient.post<Message>(this.url, msg);
+  post(message): Observable<Message> {
+    return this.httpClient.post<Message>(this.url, message);
   }
 
-  put(msg): Observable<Message> {
-    return this.httpClient.put<Message>(this.url + msg.id, msg);
+  put(message): Observable<Message> {
+    return this.httpClient.put<Message>(this.url + message.id, message);
   }
 
   delete(id) {
