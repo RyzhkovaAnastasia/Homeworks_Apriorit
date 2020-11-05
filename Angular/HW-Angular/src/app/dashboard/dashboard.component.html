@@ -1,0 +1,38 @@
+<div>
+  <h1>Dashboard</h1>
+  <form [formGroup]="messageFrom" (submit)="add()">
+    <h3>Add message: </h3>
+    <input [formControl]="message" type="text" placeholder="Message">
+    <input type="submit">
+  </form>
+    <span *ngIf="error.length !== 0">{{error}}</span>
+  <br>
+  <br>
+  <div *ngIf = "messages.length !== 0">
+    <h3>Messages list </h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Message text</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let msg of messages">
+          <td>{{m.id}}</td>
+          <td>
+            <span *ngIf="m.id !== editId">{{msg.msg}}</span>
+            <input type="text" [(ngModel)]="editedValue" *ngIf="msg.id === editId" />
+          </td>
+          <td>
+            <div>
+              <button (click)="msg.id === editId ? update(msg.id, $event) : setEditable(msg.id, $event)">Update</button>
+              <button (click)="delete(msg.id)">Delete</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
