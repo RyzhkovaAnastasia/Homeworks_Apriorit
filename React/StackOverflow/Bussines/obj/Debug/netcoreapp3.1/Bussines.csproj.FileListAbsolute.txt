@@ -1,0 +1,15 @@
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\obj\Debug\netcoreapp3.1\Bussines.csprojAssemblyReference.cache
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\obj\Debug\netcoreapp3.1\Bussines.AssemblyInfoInputs.cache
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\obj\Debug\netcoreapp3.1\Bussines.AssemblyInfo.cs
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\bin\Debug\netcoreapp3.1\Bussines.deps.json
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\bin\Debug\netcoreapp3.1\Bussines.runtimeconfig.json
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\bin\Debug\netcoreapp3.1\Bussines.runtimeconfig.dev.json
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\bin\Debug\netcoreapp3.1\Bussines.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\bin\Debug\netcoreapp3.1\Bussines.pdb
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\obj\Debug\netcoreapp3.1\Bussines.csproj.CoreCompileInputs.cache
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\obj\Debug\netcoreapp3.1\Bussines.csproj.CopyComplete
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\obj\Debug\netcoreapp3.1\Bussines.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\obj\Debug\netcoreapp3.1\Bussines.pdb
+C:\Users\sherl\Desktop\apriorit\homeworks\React\StackOverflow\Bussines\obj\Debug\netcoreapp3.1\Bussines.genruntimeconfig.cache
