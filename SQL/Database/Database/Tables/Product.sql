@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Product]
+(
+	[Id] INT NOT NULL IDENTITY PRIMARY KEY, 
+    [ProductName] NVARCHAR(50) NOT NULL,
+	[ProducerId] INT,
+	CONSTRAINT FK_Product_to_Producer FOREIGN KEY ([ProducerId]) REFERENCES [Producer]([Id]) ON DELETE CASCADE ON UPDATE CASCADE
+)

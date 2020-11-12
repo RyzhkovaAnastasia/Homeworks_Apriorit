@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Storage]
+(
+	[Id] INT NOT NULL IDENTITY PRIMARY KEY, 
+    [StorageName] NVARCHAR(50) NOT NULL
+)

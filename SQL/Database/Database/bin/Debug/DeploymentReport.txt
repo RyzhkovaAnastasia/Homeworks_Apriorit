@@ -1,0 +1,26 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[productTableType] (User-Defined Table Type)
+       [dbo].[Producer] (Table)
+       [dbo].[Product] (Table)
+       [dbo].[Product_On_Storage] (Table)
+       [dbo].[Storage] (Table)
+       [dbo].[FK_Product_to_Producer] (Foreign Key)
+       [dbo].[FK_ProductOnStorage_to_Storage] (Foreign Key)
+       [dbo].[FK_ProductOnStorage_to_Product] (Foreign Key)
+       [dbo].[GetProducerProductStorage] (View)
+       [dbo].[AddProductToStorage] (Procedure)
+       [dbo].[CreateProducerWithProducts] (Procedure)
+       [dbo].[DeleteProduct] (Procedure)
+
+** Supporting actions
