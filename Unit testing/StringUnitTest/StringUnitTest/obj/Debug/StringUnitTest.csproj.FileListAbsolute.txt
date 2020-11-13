@@ -1,0 +1,14 @@
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\bin\Debug\StringUnitTest.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\bin\Debug\StringUnitTest.pdb
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\obj\Debug\StringUnitTest.csprojAssemblyReference.cache
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\obj\Debug\StringUnitTest.csproj.CoreCompileInputs.cache
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\obj\Debug\StringUnitTest.csproj.CopyComplete
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\obj\Debug\StringUnitTest.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\Unit testing\StringUnitTest\StringUnitTest\obj\Debug\StringUnitTest.pdb
