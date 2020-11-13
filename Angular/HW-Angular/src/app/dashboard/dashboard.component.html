@@ -2,7 +2,7 @@
   <h1>Dashboard</h1>
   <form [formGroup]="messageFrom" (submit)="add()">
     <h3>Add message: </h3>
-    <input formControlName="message" type="text" placeholder="Message text">
+    <input formControlName="msg" type="text" placeholder="Message text">
     <input type="submit">
   </form>
   <span *ngIf="error.length !== 0">{{error}}</span>
@@ -20,9 +20,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let msg of messages">
-          <td>{{m.id}}</td>
+          <td>{{msg.id}}</td>
           <td>
-            <span *ngIf="m.id !== editId">{{msg.msg}}</span>
+            <span *ngIf="msg.id !== editId">{{msg.msg}}</span>
             <input type="text" [(ngModel)]="editedValue" *ngIf="msg.id === editId" />
           </td>
           <td>

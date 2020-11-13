@@ -11,12 +11,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class DashboardComponent implements OnInit {
 
   public messageFrom = new FormGroup({
-    message: new FormControl("")
+    msg: new FormControl("")
   });
 
   message = this.messageFrom.get('message');
 
-  public messages: Message[];
+  public messages: Message[] = [];
   public error = "";
   public editId: number;
   public editedValue: string;
@@ -25,7 +25,6 @@ export class DashboardComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.messages = [];
     this.dashService.get()
     .subscribe(data => {
       this.error = "";
@@ -72,6 +71,7 @@ export class DashboardComponent implements OnInit {
   }
 
   add() {
+    console.log(this.messageFrom.value);
     this.dashService.post(this.messageFrom.value)
     .subscribe(data => {
       this.messages.push(data);
