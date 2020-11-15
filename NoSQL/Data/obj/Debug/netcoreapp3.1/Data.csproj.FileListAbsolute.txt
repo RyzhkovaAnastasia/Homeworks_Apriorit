@@ -1,0 +1,12 @@
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\bin\Debug\netcoreapp3.1\Enums.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\obj\Debug\netcoreapp3.1\Data.csprojAssemblyReference.cache
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfoInputs.cache
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfo.cs
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\bin\Debug\netcoreapp3.1\Data.deps.json
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\bin\Debug\netcoreapp3.1\Enums.pdb
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\obj\Debug\netcoreapp3.1\Data.csproj.CopyComplete
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\obj\Debug\netcoreapp3.1\Data.dll
+C:\Users\sherl\Desktop\apriorit\homeworks\NoSQL\Data\obj\Debug\netcoreapp3.1\Data.pdb
